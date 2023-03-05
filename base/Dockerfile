@@ -38,7 +38,7 @@ RUN cp -p "${SPARK_HOME}/conf/spark-defaults.conf.template" "${SPARK_HOME}/conf/
     echo 'spark.executor.extraJavaOptions -Dio.netty.tryReflectionSetAccessible=true' >> "${SPARK_HOME}/conf/spark-defaults.conf"
 
 
-RUN python3 -m pip install --no-cache-dir dedupe==2.0.23
+RUN python3 -m pip install --no-cache-dir dedupe==2.0.23 pyarrow==11.0.0
 
 
 #Give permission to execute scripts
